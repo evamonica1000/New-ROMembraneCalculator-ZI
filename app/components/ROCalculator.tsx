@@ -191,7 +191,7 @@ const ROCalculator = () => {
     let pressureChart: Chart | null = null;
 
     const initializeGraphs = (elementResults: any[]) => {
-      const stages = [...new Set(elementResults.map((el) => el.stage))];
+      const stages = Array.from(new Set(elementResults.map((el) => el.stage)));
 
       // Concentration Graph
       const ctxConc = document.getElementById(
